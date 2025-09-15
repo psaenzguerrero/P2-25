@@ -5,14 +5,15 @@ import Products from './pages/Products';
 import Cart from './pages/Cart';
 import ProductDetail from './pages/ProductDetail';
 import { CartProvider } from './context/CartContext';
+import './App.css';
 
 function App() {
   return (
     <CartProvider>
       <Router>
-        <div className="min-h-screen bg-gray-100">
+        <div className="app">
           <Navbar />
-          <main className="container mx-auto px-4 py-8">
+          <main className="main-content">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/products" element={<Products />} />
