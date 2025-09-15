@@ -1,12 +1,49 @@
-# React + Vite
+# ModaFashion - Tienda de Ropa Online
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una tienda de ropa moderna y completamente funcional construida con React, Vite, Tailwind CSS y la Fake Store API.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Catálogo de productos con filtrado por categorías
+- Carrito de compras funcional
+- Páginas de detalles de productos
+- Diseño responsive que funciona en móviles, tablets y escritorio
+- Estado global del carrito usando React Context
+- Integración con Fake Store API
 
-## Expanding the ESLint configuration
+## Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 18
+- React Router v6
+- Tailwind CSS
+- Hero Icons
+- Vite
+- Fake Store API
+
+## Cómo ejecutar el proyecto
+
+1. Clona el repositorio
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+4. Abre [http://localhost:5173](http://localhost:5173) en tu navegador
+
+## Estructura del proyecto
+
+```
+src/
+├── components/     # Componentes reutilizables
+├── context/       # Contextos de React
+├── pages/         # Componentes de página
+├── App.jsx        # Componente principal
+└── main.jsx       # Punto de entrada
+```
+
+## Licencia
+
+MIT
