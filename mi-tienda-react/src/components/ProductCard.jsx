@@ -55,14 +55,17 @@ const ProductCard = ({ product, onAddToCart }) => {
             </span>
           </div>
           <button
+            type="button"
             onClick={(e) => {
               e.preventDefault();
               onAddToCart(product);
             }}
             className="add-to-cart-button"
+            aria-label={`Añadir ${product.title} al carrito`}
+            title="Añadir al carrito"
           >
             <ShoppingCartIcon className="cart-icon" />
-            Añadir
+            Añadir al carrito
           </button>
         </div>
       </div>

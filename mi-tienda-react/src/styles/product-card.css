@@ -1,5 +1,5 @@
 .product-card {
-  background-color: white;
+  background-color: var(--surface);
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   overflow: hidden;
@@ -23,7 +23,7 @@
   width: 100%;
   height: auto;
   min-height: clamp(10rem, 30vw, 14rem);
-  background-color: #f3f4f6;
+  background-color: var(--surface-alt);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@
 .product-title {
   font-size: clamp(1rem, 0.6vw + 0.9rem, 1.125rem);
   font-weight: 600;
-  color: #111827;
+  color: var(--text);
   margin-bottom: 0.5rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -71,13 +71,13 @@
 .product-price {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #4f46e5;
+  color: var(--primary);
 }
 
 .free-shipping {
   font-size: 0.75rem;
-  background-color: #d1fae5;
-  color: #065f46;
+  background-color: var(--success-bg);
+  color: var(--success-fg);
   padding: 0.125rem 0.5rem;
   border-radius: 9999px;
   font-weight: 500;
@@ -89,7 +89,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--border);
 }
 
 .rating-container {
@@ -113,32 +113,37 @@
 }
 
 .star-icon.empty {
-  color: #d1d5db;
+  color: var(--border);
 }
 
 .rating-count {
   font-size: 0.75rem;
-  color: #6b7280;
+  color: var(--muted);
   margin-left: 0.25rem;
 }
 
 .add-to-cart-button {
   display: inline-flex;
   align-items: center;
-  background: none;
+  justify-content: center;
+  background: var(--primary);
+  color: var(--primary-contrast);
   border: none;
-  color: #4f46e5;
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 600;
   cursor: pointer;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.25rem;
-  transition: background-color 0.2s ease-in-out;
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease-in-out, transform 0.05s ease-in-out;
   min-height: 44px;
 }
 
 .add-to-cart-button:hover {
-  background-color: #eef2ff;
+  background-color: var(--primary-hover);
+}
+
+.add-to-cart-button:active {
+  transform: translateY(1px);
 }
 
 .cart-icon {

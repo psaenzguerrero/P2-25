@@ -37,9 +37,11 @@ const Products = () => {
         }
         
         let data = await response.json();
-        
-        // Filter out any products that don't have images
-        data = data.filter(product => product.image);
+
+        // Filtrar productos sin imagen y no-ropa
+        data = data
+          .filter(product => product.image)
+          .filter(product => /clothing/i.test(product.category));
         
         setProducts(data);
         setError(null);

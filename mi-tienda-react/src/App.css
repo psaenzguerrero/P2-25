@@ -29,7 +29,7 @@ html {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #f9fafb;
+  background-color: var(--bg);
   overflow-x: hidden;
 }
 
