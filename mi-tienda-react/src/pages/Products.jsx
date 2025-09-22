@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
+import { useSearchParams, Link, useNavigate } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import { useCart } from '../context/CartContext';
 import '../styles/products.css';
@@ -11,8 +11,15 @@ const Products = () => {
   const [searchParams] = useSearchParams();
   const category = searchParams.get('category');
   const { addToCart } = useCart();
+  const navigate = useNavigate();
 
   useEffect(() => {
+    // Redirigir si la categoría es electrónica (oculta)
+    if (category && category.toLowerCase() === 'electronics') {
+      navigate('/products', { replace: true });
+      return;
+    }
+
     const fetchProducts = async () => {
       try {
         setLoading(true);
@@ -38,10 +45,10 @@ const Products = () => {
         
         let data = await response.json();
 
-        // Filtrar productos sin imagen y no-ropa
+        // Filtrar productos sin imagen y mantener solo ropa y joyería
         data = data
           .filter(product => product.image)
-          .filter(product => /clothing/i.test(product.category));
+          .filter(product => /(clothing|jewelery)/i.test(product.category));
         
         setProducts(data);
         setError(null);

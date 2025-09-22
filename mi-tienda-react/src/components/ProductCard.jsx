@@ -50,9 +50,6 @@ const ProductCard = ({ product, onAddToCart }) => {
                 </svg>
               ))}
             </div>
-            <span className="rating-count">
-              ({product.rating?.count || 0})
-            </span>
           </div>
           <button
             type="button"

@@ -4,7 +4,7 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>  // ← Solo esto, sin Router
-    <App />            // ← Tu App.js ya maneja el routing
+  <React.StrictMode>  
+    <App />           
   </React.StrictMode>
 );
